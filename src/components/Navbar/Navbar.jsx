@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from '../Link/Link';
+import { FaAlignJustify, FaChevronDown } from "react-icons/fa";
 
 const Navbar = () => {
+
+    const [open, setOpen] = useState(false)
 
     const routes = [
         { path: '/', name: 'Home', id: 'home' },
@@ -13,8 +16,18 @@ const Navbar = () => {
 
       
     return (
-        <nav>
-        <ul className='md:flex'>
+        <nav className='text-black bg-yellow-200'>
+            <div className=' md:hidden' onClick={() => setOpen(!open)}>
+                {
+                    open === true ? 
+                    <FaChevronDown></FaChevronDown> :
+                     <FaAlignJustify className='text-2xl'></FaAlignJustify>
+                }
+            
+            </div>
+        <ul className={`md:flex duration-1000 absolute
+        ${open ? 'top-8' : '-top-60'}
+        bg-yellow-200`}>
             {
                 routes.map(route => <Link key={route.id} route={route}></Link>)
             }
