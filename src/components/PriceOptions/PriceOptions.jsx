@@ -76,12 +76,14 @@ const PriceOptions = () => {
       
 
     return (
-        <div>
-            <h2 className='text-5xl'>Best Prices in the town</h2>
+        <div className='lg:m-12'>
+            <h2 className='lg:text-5xl text-2xl text-center lg:my-5 my-2'>Best Prices in the town</h2>
+            <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-6 '>
             {
                 priceOptions.map(option =>
                      <PriceOption key={option.id} option={option}></PriceOption>)
             }
+            </div>
         </div>
     );
 };

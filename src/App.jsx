@@ -1,5 +1,7 @@
 import "./App.css";
+import LineChart from "./components/LineChart/LineChart";
 import Navbar from "./components/Navbar/Navbar";
+import Phones from "./components/Phones/Phones";
 import PriceOptions from "./components/PriceOptions/PriceOptions";
 import DaisyNav from "./components/daisyNav/DaisyNav";
 
@@ -9,6 +11,8 @@ function App() {
       <Navbar></Navbar>
       {/* <DaisyNav></DaisyNav> */}
       <PriceOptions></PriceOptions>
+      <LineChart></LineChart>
+      <Phones></Phones>
 
     </>
   );

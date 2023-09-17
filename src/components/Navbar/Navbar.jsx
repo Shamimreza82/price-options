@@ -16,18 +16,18 @@ const Navbar = () => {
 
       
     return (
-        <nav className='text-black bg-yellow-200'>
+        <nav className='text-black bg-blue-500 flex lg:justify-center'>
             <div className=' md:hidden' onClick={() => setOpen(!open)}>
                 {
                     open === true ? 
                     <FaChevronDown></FaChevronDown> :
-                     <FaAlignJustify className='text-2xl'></FaAlignJustify>
+                     <FaAlignJustify className='text-2xl text-white'></FaAlignJustify>
                 }
             
             </div>
         <ul className={`md:flex duration-1000 absolute md:static
-        ${open ? 'top-8' : '-top-60'}
-        bg-yellow-200`}>
+            ${open ? 'top-8' : '-top-60'}
+            bg-blue-500`}>
             {
                 routes.map(route => <Link key={route.id} route={route}></Link>)
             }
