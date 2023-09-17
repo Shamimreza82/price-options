@@ -25,7 +25,7 @@ const Navbar = () => {
                 }
             
             </div>
-        <ul className={`md:flex duration-1000 absolute
+        <ul className={`md:flex duration-1000 absolute md:static
         ${open ? 'top-8' : '-top-60'}
         bg-yellow-200`}>
             {
